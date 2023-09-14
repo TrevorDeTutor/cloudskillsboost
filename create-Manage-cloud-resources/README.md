@@ -3,7 +3,7 @@ You will serve the site via nginx web servers, but you want to ensure that the e
 
 Create an HTTP load balancer with a managed instance group of 2 nginx web servers.
 
-STEPS:
+#### STEPS:
 1. Create an instance template.
 2. Create a target pool.
 3. Create a managed instance group.
