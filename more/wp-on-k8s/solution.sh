@@ -55,7 +55,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member serviceAccount:$SA_EMAIL
 
 # create a key for the service account:
-gcloud iam service-accounts keys create $WORKING_DIR/key.json \
+gcloud iam service-accounts keys create $WORKING_DIR/../../key.json \
     --iam-account $SA_EMAIL
 
 # create a Kubernetes secret for the MySQL credentials
@@ -65,7 +65,7 @@ kubectl create secret generic cloudsql-db-credentials \
 
 # kubernetes secret for the service account credentials
 kubectl create secret generic cloudsql-instance-credentials \
-    --from-file $WORKING_DIR/key.json
+    --from-file $WORKING_DIR/../../key.json
 
 
 #4b. Deploy WordPress
